@@ -2,9 +2,8 @@
 #include "Student.h"
 #include "Instructor.h"
 #include <utility>
+
 using namespace std;
-
-
 
 typedef string Lecture;
 
