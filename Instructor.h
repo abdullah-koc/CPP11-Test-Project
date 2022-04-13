@@ -13,8 +13,6 @@ public:
 
 	Instructor(int insId, shared_ptr<string> lecture);
 
-	virtual ~Instructor();
-
 	int getInsId() const;
 
 	string getLecture() const;

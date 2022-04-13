@@ -4,12 +4,6 @@ Student::Student(int id, string name)
 {
 	this->id = id;
 	this->name = name;
-	cout << "Student " << id << " constructor" << endl;
-}
-
-Student::~Student()
-{
-	cout << "Student " << id << " destructor" << endl;
 }
 
 int Student::getId() const

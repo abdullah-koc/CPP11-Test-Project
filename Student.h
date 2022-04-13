@@ -14,8 +14,6 @@ public:
 
 	Student(int id, string name);
 
-	virtual ~Student();
-
 	int getId() const;
 
 	void setId(int id);

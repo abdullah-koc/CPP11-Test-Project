@@ -9,8 +9,9 @@ vector<Student*> students;
 vector <Instructor*> instructors;
 typedef string Lecture;
 
-void showStudents()
+auto showStudents = []()
 {
+	cout << endl << "Students:" << endl;
 	for (auto& s : students)
 	{
 		printf("%4s %10s\n", "ID", "Name");
@@ -19,16 +20,17 @@ void showStudents()
 		s->getLecturesTaken();
 		cout << endl;
 	}
-}
+};
 
-void showInstructors()
+auto showInstructors = []()
 {
+	cout << endl << "Instructors:" << endl;
 	for (auto& i : instructors)
 	{
 		printf("%4s %10s\n", "ID", "Lecture");
 		printf("%4d %10s\n", i->getInsId(), i->getLecture().c_str());
 	}
-}
+};
 
 int main() {
 	
