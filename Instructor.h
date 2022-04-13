@@ -13,9 +13,9 @@ public:
 
 	Instructor(int insId, shared_ptr<string> lecture);
 
-	int getInsId() const;
+	int GetInsId() const;
 
-	string getLecture() const;
+	string GetLecture() const;
 
 private:
 	int id;

@@ -6,31 +6,31 @@ Student::Student(int id, string name)
 	this->name = name;
 }
 
-int Student::getId() const
+int Student::GetId() const
 {
 	return id;
 }
 
-void Student::setId(int id)
+void Student::SetId(int id)
 {
 	this->id = id;
 }
 
-string Student::getName() const
+string Student::GetName() const
 {
 	return name;
 }
 
-void Student::setName(string name)
+void Student::SetName(string name)
 {
 	this->name = name;
 }
 
-void Student::getLecturesTaken() const
+void Student::GetLecturesTaken() const
 {
 	for (auto const& l : lecturesTaken)
 	{
-		cout <<"Lecture " <<  *l << endl;
+		cout << "Lecture " << *l << endl;
 	}
 	if (lecturesTaken.size() == 0)
 	{
@@ -38,7 +38,7 @@ void Student::getLecturesTaken() const
 	}
 }
 
-void Student::getGrades() const
+void Student::GetGrades() const
 {
 	for (auto& g : grades)
 	{
@@ -46,9 +46,9 @@ void Student::getGrades() const
 	}
 }
 
-int Student::addLecture(shared_ptr<string> lecture)
+int Student::AddLecture(shared_ptr<string> lecture)
 {
-	for (auto& l : lecturesTaken) 
+	for (auto& l : lecturesTaken)
 	{
 		if (*l == *lecture)
 		{
@@ -61,7 +61,7 @@ int Student::addLecture(shared_ptr<string> lecture)
 	return 0;
 }
 
-int Student::addGrade(const shared_ptr<string>& lecture, const int& grade)
+int Student::AddGrade(const shared_ptr<string>& lecture, const int& grade)
 {
 	for (auto& l : lecturesTaken)
 	{
@@ -72,7 +72,7 @@ int Student::addGrade(const shared_ptr<string>& lecture, const int& grade)
 				if (*g.first == *lecture)
 				{
 					cout << "Student " << id << " has already got a grade from lecture " << *lecture << ". Updating the grade..." << endl;
-					return changeGrade(lecture, grade);
+					return ChangeGrade(lecture, grade);
 				}
 			}
 			grades.emplace(lecture, grade);
@@ -84,7 +84,7 @@ int Student::addGrade(const shared_ptr<string>& lecture, const int& grade)
 	return -1;
 }
 
-int Student::changeGrade(const shared_ptr<string>& lecture, const int& grade)
+int Student::ChangeGrade(const shared_ptr<string>& lecture, const int& grade)
 {
 	for (auto& l : lecturesTaken)
 	{

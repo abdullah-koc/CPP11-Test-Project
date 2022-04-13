@@ -14,23 +14,23 @@ public:
 
 	Student(int id, string name);
 
-	int getId() const;
+	int GetId() const;
 
-	void setId(int id);
+	void SetId(int id);
 
-	string getName() const;
+	string GetName() const;
 
-	void setName(string name);
+	void SetName(string name);
 
-	void getLecturesTaken() const;
+	void GetLecturesTaken() const;
 
-	void getGrades() const;
+	void GetGrades() const;
 
-	int addLecture(shared_ptr<string> lecture);
+	int AddLecture(shared_ptr<string> lecture);
 
-	int addGrade(const shared_ptr<string>& lecture, const int& grade);
+	int AddGrade(const shared_ptr<string>& lecture, const int& grade);
 
-	int changeGrade(const shared_ptr<string>& lecture, const int& grade);
+	int ChangeGrade(const shared_ptr<string>& lecture, const int& grade);
 
 private:
 	int id{};

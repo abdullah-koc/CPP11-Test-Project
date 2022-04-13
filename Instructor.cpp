@@ -10,12 +10,12 @@ Instructor::Instructor(int insId, shared_ptr<string> lecture)
 	this->lecture = lecture;
 }
 
-int Instructor::getInsId() const
+int Instructor::GetInsId() const
 {
 	return id;
 }
 
-string Instructor::getLecture() const
+string Instructor::GetLecture() const
 {
 	return *lecture;
 }
