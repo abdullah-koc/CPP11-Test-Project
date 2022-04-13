@@ -5,11 +5,10 @@
 using namespace std;
 
 
-vector<Student*> students;
-vector <Instructor*> instructors;
+
 typedef string Lecture;
 
-auto showStudents = []()
+auto ShowStudents = [](const vector<Student*>& students)
 {
 	cout << endl << "Students:" << endl;
 	for (auto& s : students)
@@ -22,7 +21,7 @@ auto showStudents = []()
 	}
 };
 
-auto showInstructors = []()
+auto ShowInstructors = [](const vector <Instructor*>& instructors)
 {
 	cout << endl << "Instructors:" << endl;
 	for (auto& i : instructors)
@@ -33,6 +32,9 @@ auto showInstructors = []()
 };
 
 int main(int argc, char* argv[]) {
+
+	vector<Student*> students;
+	vector <Instructor*> instructors;
 
 	shared_ptr<Lecture> l1 = make_shared<Lecture>("L1");
 	shared_ptr<Lecture> l2 = make_shared<Lecture>("L2");
@@ -84,11 +86,10 @@ int main(int argc, char* argv[]) {
 
 	students[1]->GetGrades();
 
-	showStudents();
-
+	ShowStudents(students);
 	students[0]->GetGrades();
 
-	showInstructors();
+	ShowInstructors(instructors);
 
 	return 0;
 }
